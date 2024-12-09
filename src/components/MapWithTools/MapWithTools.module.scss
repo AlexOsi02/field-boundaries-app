@@ -1,38 +1,68 @@
-$button-bg: #4caf50;
-$button-bg-hover: #45a049;
-$button-disabled-bg: #a5d6a7;
-$button-color: white;
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 20px;
+  height: calc(100vh - 70px);
+  background-color: #f5f6fa;
+  box-shadow: inset 0 8px 8px -8px #0000004d;
+}
+
+.calculatedInfo {
+  p {
+    margin: 0.5rem 0;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}
+
+.list {
+  ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+}
 
 .mapContainer {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.map {
+  height: 100%;
   width: 100%;
-  margin: 20px auto;
+  padding: 12px;
+}
+
+.returnButtons {
+  position: absolute;
+  top: 35px;
+  right: 40px;
+}
+
+.img {
+  width: 24px;
+
+  &__reflect {
+    transform: scale(-1, 1);
+  }
+}
+
+.tools {
+  padding: 12px;
+}
+
+.alignContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .controls {
   margin-top: 10px;
   display: flex;
   gap: 10px;
+}
 
-  button {
-    padding: 10px 15px;
-    background-color: $button-bg;
-    color: $button-color;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:disabled {
-      background-color: $button-disabled-bg;
-      cursor: not-allowed;
-    }
-
-    &:hover:not(:disabled) {
-      background-color: $button-bg-hover;
-    }
-  }
+.input {
+  margin-right: 20px;
 }

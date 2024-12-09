@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+# Веб-приложение для обозначения границ поля на карте (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Инструкция по запуску
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Для запуска проекта необходима одна из следующих версий Node.js:
+- **Node.js**: `^18.18.0`, `^20.9.0` или `>=21.1.0`
 
-## Expanding the ESLint configuration
+1. Установите зависимости с помощью ```npm install```
+2. Запустите проект с помощью ```npm run dev```
+3. Откройте приложение в браузере http://localhost:5173/
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Инструкция по использованию
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Загрузить ранее сохранённый контур с помощью кнопки `Загрузить контур` или перейти в режим рисования с помощью кнопки `Начать рисование` и нарисовать контур 
+ ![img.png](img.png)
+2. После завершения контура отобразится следующая информация:
+    - Площадь поля в гектарах;
+    - Периметр поля в метрах;
+    - Координаты вершин полигона;
+![img2.png](img2.png)
+   А также станет доступна кнопка `Скачать`, чтобы сохранить полигон, и поле ввода, куда можно ввести координаты, а в
+      ответ появится диалоговое окно, находится ли точка внутри полигона или вне.
+      ![img3.png](img3.png)

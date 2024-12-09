@@ -1,0 +1,45 @@
+$button-bg: #4caf50;
+$button-bg-hover: #45a049;
+$button-disabled-bg: #a5d6a7;
+$button-color: white;
+$button-active-bg: #ff9800;
+
+$button-bg-red: #f60b0b;
+$button-hover-red: #e33f3f;
+$button-disabled-red: #ffaebb;
+
+.button {
+  padding: 10px 15px;
+  background-color: $button-bg;
+  color: $button-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background-color: $button-bg-hover;
+  }
+
+  &:disabled {
+    background-color: $button-disabled-bg;
+    cursor: not-allowed;
+  }
+
+  &.active {
+    background-color: $button-active-bg;
+  }
+
+  &.red {
+    background-color: $button-bg-red;
+
+    &:hover:not(:disabled) {
+      background-color: $button-hover-red;
+    }
+
+    &:disabled {
+      background-color: $button-disabled-red;
+      cursor: not-allowed;
+    }
+  }
+}
