@@ -11,7 +11,6 @@ export interface IButtonProps {
 }
 
 const Button: FC<IButtonProps> = ({ onClick, disabled = false, active = false, variant = "default", children }) => {
-  console.log("styles.active", styles.active);
   return (
     <button
       onClick={onClick}
